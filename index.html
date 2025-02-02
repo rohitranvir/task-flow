@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="taskflow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        
+        <!-- Header -->
+        <header>
+            <h1>Task Management System</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+          
+
+        <!-- Task Input Form -->
+        <div class="task-form">
+            <input type="text" id="task-input" placeholder="Enter a new task...">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <!-- Task List Section -->
+        <h2>Task List</h2>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox" id="task1">
+                <label for="task1">Design the UI wireframe</label>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i id="trash" class="fa-solid fa-trash"></i>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task2">
+                <label for="task2">Develop the Task Flow</label>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i id="trash" class="fa-solid fa-trash"></i>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task3">
+                <label for="task3">Implement API Integration</label>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i id="trash" class="fa-solid fa-trash"></i>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task4">
+                <label for="task4">Testing and Debugging</label>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i id="trash" class="fa-solid fa-trash"></i>
+            </div>
+            <div id="task">
+                
+                <h2>Create a new task</h2>
+                <div class="input">
+                    <label for="title1"><p  >task title</p></label>
+                    <input class="input1" id="title1" type="text" placeholder="Enter task tittle">
+                </div>
+                <div class="input">
+                    <label for="desc"><p  >description</p></label>
+                    <textarea name="textarea" id="desc" style="   width: 95%;
+                    height: 70px;
+                    padding-left: 10px;
+                    margin: 0 50px 10px 20px;
+                    border-radius: 5px;
+                    padding-top: 10px;" placeholder="task Desription"></textarea>
+                 </div>
+                <div class="input">
+                    <label for="date"><p  >Due date</p></label>
+                    <input class="input1" id="date" type="date" placeholder="Enter task tittle">
+                </div>
+                <div class="input">
+                    <label for="opt"><p  >priority</p></label>
+                    <select name="priority" id="opt">
+                        <option value="Low ">Low</option>
+                        <option value="medium">medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <!-- <input class="input1" id="title1" type="text" placeholder="Enter task tittle"> -->
+                </div>
+                <div class="input">
+                    <label for="title1"><p  >Categorie</p></label>
+                    <!-- <input class="input1" id="title1" type="text" placeholder="Enter task tittle"> -->
+                    <label for="opt1"><p  >priority</p></label>
+                    <select name="priority" id="opt1">
+                        <option value="Work ">Work</option>
+                        <option value="personal">personal</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Health">Health</option>
+                    </select>
+                    <div class="btn">
+                        <button id="btn" class="create first">Create task</button>
+                        <button id="btn"class="cancle second">Cancel</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            
+        </div>
+
+
+        <!-- Task Flow Visualization -->
+        <div class="task-flow">
+            
+                <h2>Task Flow</h2>
+               
+            <div class="task-progress">
+                <div class="main-div">Total tasks
+                    <div class="text">
+                    <h3>248</h3>
+                    <p class="p1">↑ 12% from last month</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-clipboard"></i> 
+                </div>
+                </div>
+                <div class="main-div">In progress
+                    <div class="text1">
+                        <h3>45</h3>
+                        <p class="p2">Active tasks</p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock" id="one"></i>
+                    </div>
+                </div>
+                <div class="main-div">Complated
+                    <div class="text2">
+                        <h3>121</h3>
+                    <p class="p3">↑ 8% completion rate</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-check" id="two"></i>
+                    </div>
+                </div>
+                <div class="main-div">overdue
+                    <div class="text3">
+                            <h3>82</h3>
+                        <p class="p4">Needs attention</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-exclamation" id="three"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Task calander -->
+            <div class="header1">
+                <h1>Task Board</h1>
+                <button class="add-task-btn"><i class="fas fa-plus"></i> Add Task</button>
+            </div>
+            <div class="board">
+                <div class="column">
+                    
+                    <h2>To Do <span>4</span></h2>
+                    <div class="task1">
+                        <h3>Design new dashboard layout <span class="label design">Design</span></h3>
+                        <p>Create wireframes and mockups for the new admin dashboard interface</p>
+                        <p class="due-date">Due in 3 days</p>
+                    </div>
+                    <div class="task1">
+                        <h3>API Integration <span class="label development">Development</span></h3>
+                        <p>Implement REST API endpoints for user authentication</p>
+                        <p class="due-date">Due in 5 days</p>
+                    </div>
+                
+                </div>
+                <div class="column">
+                    
+                    <h2>In Progress <span>3</span></h2>
+                    <div class="task1">
+                        <h3>User Testing <span class="label testing">Testing</span></h3>
+                        <p>Conduct user testing sessions for the new features</p>
+                        <p class="due-date">Due tomorrow</p>
+                    </div>
+               
+                </div>
+                <div class="column">
+                    
+                    <h2>Completed <span>2</span></h2>
+                    <div class="task1">
+                        <h3><s>Setup Project Structure</s> <span class="label setup">Setup</span></h3>
+                        <p>Initialize project repository and setup basic structure</p>
+                        <p class="due-date">Completed</p>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        
+    
+        </div>
+        <div class="container">
+            <div class="header">
+                <h1>October 2023</h1>
+                <button><i class="fas fa-plus"></i> Add Event</button>
+            </div>
+            <div class="calendar-nav">
+                <div>
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="view-options">
+                    <button class="active">Month</button>
+                    <button>Week</button>
+                    <button>Day</button>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="day">
+                    <div class="date">30</div>
+                </div>
+                <div class="day">
+                    <div class="date">1</div>
+                    <div class="event">9:00 AM Meeting</div>
+                </div>
+                <div class="day">
+                    <div class="date">2</div>
+                    <div class="event green">Design Review</div>
+                </div>
+                <div class="day">
+                    <div class="date">3</div>
+                </div>
+                <div class="day">
+                    <div class="date">4</div>
+                    <div class="event purple">Project Deadline</div>
+                </div>
+                <div class="day">
+                    <div class="date">5</div>
+                </div>
+                <div class="day">
+                    <div class="date">6</div>
+                </div>
+                <div class="day">
+                    <div class="date">7</div>
+                </div>
+                <div class="day">
+                    <div class="date">8</div>
+                    <div class="event yellow">Team Sync</div>
+                </div>
+                <div class="day">
+                    <div class="date">9</div>
+                </div>
+                <div class="day">
+                    <div class="date">10</div>
+                    <div class="event">Sprint Planning</div>
+                    <div class="event green">Code Review</div>
+                </div>
+                <div class="day">
+                    <div class="date">11</div>
+                </div>
+                <div class="day">
+                    <div class="date">12</div>
+                </div>
+                <div class="day">
+                    <div class="date">13</div>
+                </div>
+            </div>
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="event">
+                    <div class="dot blue"></div>
+                    <div>
+                        <div>Team Meeting</div>
+                        <div>Today at 2:00 PM</div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="dot green"></div>
+                    <div>
+                        <div>Project Review</div>
+                        <div>Tomorrow at 10:00 AM</div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="dot purple"></div>
+                    <div>
+                        <div>Client Presentation</div>
+                        <div>Oct 15 at 3:30 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+    
+        
+    </div>
+    
+
+    
+</body>
+</html>
